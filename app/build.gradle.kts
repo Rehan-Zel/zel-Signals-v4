@@ -1,3 +1,5 @@
+import org.gradle.api.artifacts.dsl.DependencyHandler
+
 android {
     compileSdk = 34
 
@@ -11,10 +13,10 @@ android {
 
     packaging {
         resources {
-            excludes += "META-INF/versions/9/OSGI-INF/MANIFEST.MF"
-            excludes += "META-INF/DEPENDENCIES"
-            excludes += "META-INF/LICENSE"
-            excludes += "META-INF/NOTICE"
+            excludes.add("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
+            excludes.add("META-INF/DEPENDENCIES")
+            excludes.add("META-INF/LICENSE")
+            excludes.add("META-INF/NOTICE")
         }
     }
 }
